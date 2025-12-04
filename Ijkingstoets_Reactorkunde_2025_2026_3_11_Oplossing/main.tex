@@ -85,9 +85,7 @@ Het Monsanto-proces wordt gebruikt voor de omzetting van methanol (\chemfig{CH_3
 
 
 \textbf{Vraag 1} \textbf{Bepaal het benodigde volume voor de CSTR}. Gebruik hiervoor de gegevens uit Tabel \ref{tabel 1}.
-\vspace{12pt}
-\newpage
-\vspace{16pt}
+
 \begin{table}[h!]
 \centering
 \begin{tabular}{|l|l|l|}
@@ -105,22 +103,59 @@ Kinetische constante reactie 1  & $k_1$ & $0.1 \ mol/(m^3 . h)$  \\ \hline
 \label{tabel 1}
 \end{table}
 \vspace{14pt}
-
+\noindent Massabalans over CSTR:\\ 
+\\
+$F_{\ce{CH3OH},3} - F_{\ce{CH3OH},4} + R_{\ce{CH3OH}}(C_{\ce{CH3OH},4})*V=0$\\
+$q_3*C_{\ce{CH3OH},3} - q_3*C_{\ce{CH3OH},4} = k_1 * V$\\
+$q_3*(C_{\ce{CH3OH},3} - C_{\ce{CH3OH},4} )= k_1 * V$\\
+$q_3*(C_{\ce{CO},3} - C_{\ce{CO},4} )= k_1 * V$\\
+$q_3*(C_{\ce{CO},3} - C_{\ce{CO},3} * (1-x_{\ce{CO}}))= k_1 * V$\\
+$V = 81 m^3$\\
+\\ \\
 \textbf{Vraag 2} Veronderstel dat al het azijnzuur aanwezig in de inputstroom van de distillatiekolom (stroom 4) uiteindelijk terecht komt in de bodemstroom van de distillatiekolom (stroom 6). Verder is er geweten dat de bodemstroom  uit 80 mol\% azijnzuur en 20 mol\% methanol bestaat. \textbf{Bereken het molaire debiet van azijnzuur en het molaire debiet van methanol in de bodemstroom} van de distillatiekolom (stroom 6). \textbf{Bereken ook het molaire debiet van methanol en het molaire debiet van koolstofmonoxide in de topstroom} van de distillatiekolom (stroom 5). 
-\\ \\
-TIP: Beschouw de distillatiekolom als een 'black box' met input- en outputstromen en stel hierover een massabalans op.
-\\ \\
+
 \vspace{5pt}
+\noindent Massabalans $\ce{CH3COOH}$ over de distillatiekolom:\\
+\\
+$q_3*C_{\ce{CH3COOH},4}-F_{\ce{CH3COOH}, 6}=0$\\
+$q_3*(C_{\ce{CO},3}-C_{\ce{CO},4})-F_{\ce{CH3COOH}, 6}=0$\\
+$q_3*(C_{\ce{CO},3}-C_{\ce{CO},3}*(1-x_{\ce{CO}}))-F_{\ce{CH3COOH}, 6}=0$\\
+$F_{\ce{CH3COOH}, 6}=8.1 \ mol/h$\\
+\\ \\
+$F_{\ce{CH3COOH}, 6}=x_{\ce{CH3COOH},6}*F_{tot,6}$\\
+$F_{tot,6}= \frac{F_{\ce{CH3COOH}, 6}}{x_{\ce{CH3COOH},6}}$\\
+$F_{tot,6}= 10.125\ mol/h$\\
+\\
+$F_{\ce{CH3OH}, 6}=x_{\ce{CH3OH},6}*F_{tot,6}$\\
+$F_{\ce{CH3OH},6}= 2.025\ mol/h$\\
+\\ \\ 
+\noindent Massabalans $\ce{CH3OH}$ over de distillatiekolom:\\
+\\
+$q_3*C_{\ce{CH3OH},4}-F_{\ce{CH3OH}, 5} - F_{\ce{CH3OH},6}=0$\\
+$q_3*(C_{\ce{CH3OH},3}-(C_{\ce{CO},3}-C_{\ce{CO},4}))-F_{\ce{CH3OH}, 5} - F_{\ce{CH3OH}, 6}=0$\\
+$F_{\ce{CH3OH}, 5}=q_3*(C_{\ce{CH3OH},3}-(C_{\ce{CO},3}-C_{\ce{CO},4})) - F_{\ce{CH3OH}, 6}$\\
+$F_{\ce{CH3OH}, 5}= 3.375 \ mol/h$\\
+\\ \\
+\noindent Massabalans $\ce{CO}$ over de distillatiekolom:\\
+$q_3*C_{\ce{CO},4}-F_{\ce{CO}, 5}=0$\\
+$q_3*C_{\ce{CO},3}*(1-x_{\ce{CO}})-F_{\ce{CO}, 5}=0$\\
+$F_{\ce{CO}, 5}=0.9 \ mol/h$\\
 
 \textbf{Vraag 3} Zouden we het geproduceerde molaire debiet van azijnzuur kunnen verhogen door de topstroom van de distillatiekolom (stroom 5) te recyclen en bij te voegen aan de inputstroom van de CSTR, zonder het volume van de CSTR te wijzigen? \textbf{Beargumenteer.}
-
-\vspace{20pt}
-
-\textbf{Vraag 4} De bodemstroom van de distillatiekolom (stroom 6) wordt samengevoegd met een voedingsstroom bestaande uit \ce{C2H4} en \ce{O2} (stroom 7). De resulterende stroom (stroom 8) wordt gebruikt als inlaatstroom voor de PFR. \textbf{Bepaal het benodigde volume voor de PFR.} Gebruik hiervoor de bijkomende gegevens uit Tabel \ref{tabel 2}. Indien je vraag 2 niet hebt kunnen oplossen, mag je verder werken met $F_{\ce{CH3COOH},6}$ = $8.1\ mol/h$ en $F_{\ce{I},6}$ = $0.9 \ mol/h$.
-
-
-
-\vspace{15pt}
+\\ \\
+\noindent Nee, omwille van zero-order kinetiek. Een hoger molair debiet van de reagentia zal niet leiden tot een verhoging van de reactiensnelheid. Enkel een groter volume van de CSTR zou leiden tot een hogere productie van azijnzuur.
+\\ \\
+\noindent We kunnen dit ook aantonen aan de hand van de massabalans:\\
+\\ 
+\noindent Massabalans \ce{CH3OH} over CSTR:\\
+$F_{\ce{CH3OH},3} + F_{\ce{CH3OH},5}- F_{\ce{CH3OH},4} + R_{\ce{CH3OH}}(C_{\ce{CH3OH},4})*V=0$\\
+$F_{\ce{CH3OH},4} = 9.9 mol/h$ \\
+\\ 
+$- \Delta F_{\ce{CH3OH}} = \Delta F_{\ce{CH3COOH}} = -(F_{\ce{CH3OH},4} - (F_{\ce{CH3OH},3} + F_{\ce{CH3OH},5}))$\\
+$\Delta F_{\ce{CH3COOH}}= 8.1 \ mol/h$\\
+\\ \\
+\textbf{Vraag 4} De bodemstroom van de distillatiekolom (stroom 6) wordt samengevoegd met een voedingsstroom bestaande uit \ce{C2H4} en \ce{O2} (stroom 7). De resulterende stroom (stroom 8) wordt gebruikt als inlaatstroom voor de PFR. \textbf{Bepaal het benodigde volume voor de PFR.} Gebruik hiervoor de bijkomende gegevens uit Tabel \ref{tabel 2}. Indien je vraag 2 niet hebt kunnen oplossen, mag je verder werken met $F_{\ce{CH3COOH},6}$ = $8.1\ mol/h$ en $F_{\ce{I},6}$ = $0.9 \ mol/h$.                                               
+\\
 \begin{table}[h!]
 \centering
 \begin{tabular}{|l|l|l|}
@@ -138,6 +173,47 @@ Kinetische constante reactie 2  & $k_2$ & $0.1 \ h^{-1}$  \\ \hline
 \caption{Gegevens met betrekking tot de PFR.}
 \label{tabel 2}
 \end{table}
+\\
+\noindent Massabalans $\ce{CH3COOH}$ over de PFR:\\ 
+\\
+$F_{\ce{CH3COOH}}-(F_{\ce{CH3COOH}}+dF_{\ce{CH3COOH}})+R_{\ce{CH3COOH}}*dV=0$\\
+$dF_{\ce{CH3COOH}}=R_{\ce{CH3COOH}}*dV$\\
+$-F_{\ce{CH3COOH},8} *dx_{\ce{CH3COOH}}=-k_2 *C_{\ce{CH3COOH}}*dV$\\
+$-F_{\ce{CH3COOH},8} *dx_{\ce{CH3COOH}}=-k_2 *C_{\ce{CH3COOH},8}*\frac{1-x_{\ce{CH3COOH}}}{1+\epsilon*x_{\ce{CH3COOH}}}*dV$\\
+\\ \\
+
+\noindent Masssabalans integreren:\\
+\\
+$\int_{0}^{x_{\ce{CH3COOH}}}\frac{1+\epsilon*x_{\ce{CH3COOH}}}{{1-x_{\ce{CH3COOH}}}}*dx_{\ce{CH3COOH}}=\int_{0}^{V}\frac{k_2*C_{\ce{CH3COOH},8}}{F_{\ce{CH3COOH},8}}*dV$\\
+
+$\int_{0}^{x_{\ce{CH3COOH}}}\frac{1}{{1-x_{\ce{CH3COOH}}}}dx_{\ce{CH3COOH}}+\int_{0}^{x_{\ce{CH3COOH}}}\frac{\epsilon*x_{\ce{CH3COOH}}}{{1-x_{\ce{CH3COOH}}}}dx_{\ce{CH3COOH}}=\int_{0}^{V}\frac{k_2*C_{\ce{CH3COOH},8}}{F_{\ce{CH3COOH},8}}dV$\\
+
+$\int_{u_1}^{u_2}\frac{1}{u}*-du+\epsilon *\int_{u_1}^{u_2}\frac{1-u}{u}*-du=\frac{k_2*C_{\ce{CH3COOH},8}}{F_{\ce{CH3COOH},8}}\int_{0}^{V}dV$ met substitutie $u=1-x_{\ce{CH3COOH}}$\\
+
+$-\bigl[ln(u)\bigr]_{u_1}^{u_2} - \epsilon \bigl[ln(u)-u\bigr]_{u_1}^{u_2}=\frac{k_2*C_{\ce{CH3COOH},8}}{F_{\ce{CH3COOH},8}}V$\\
+
+$\bigl[ln(1-x_{\ce{CH3COOH}})\bigr]_{x_{\ce{CH3COOH}}}^{0} + \epsilon \bigl[ln(1-x_{\ce{CH3COOH}})-(1-x_{\ce{CH3COOH}})\bigr]_{x_{\ce{CH3COOH}}}^{0}=\frac{k_2*C_{\ce{CH3COOH},8}}{F_{\ce{CH3COOH},8}}V$\\
+
+$V=\frac{F_{\ce{CH3COOH},8}}{k_2*C_{\ce{CH3COOH},8}}*((1+\epsilon)*ln(\frac{1}{1-x_{\ce{CH3COOH}}})-\epsilon*x_{\ce{CH3COOH}})$\\
+\\ \\
+
+\noindent Expansiefactor:\\
+\\
+$\epsilon = \frac{V_{x_{\ce{CH3COOH}}=1}-V_{x_{\ce{CH3COOH}}=0}}{V_{x_{\ce{CH3COOH}}=0}}$\\
+\\
+$\epsilon= \frac{(2.025+8.1+8.1+5.95+1.9)-(2.025+8.1+10+10)}{(2.025+8.1+10+10)}=-0.134$\\
+\\ \\
+
+\noindent Initiële concentratie:\\
+\\
+$C_{\ce{CH3COOH},8}=\frac{y_{\ce{CH3COOH},8}*P_8}{R*T_8}=\frac{0.269*1 \ atm}{0.08205 \frac{m^3*atm}{K*kmol}*400K}=8.2 \frac{mol}{m^3}$\\
+\\ \\ 
+
+\noindent Volume uitwerken:\\
+\\
+$V=\frac{8.1\frac{mol}{h}}{0.1\frac{1}{h}*8.2\frac{mol}{m^3}}((1-0.134)*ln(\frac{1}{1-0.9})+0.134*0.9)=20.89\ m^3$\\
+\\ \\
+
 
 
 
