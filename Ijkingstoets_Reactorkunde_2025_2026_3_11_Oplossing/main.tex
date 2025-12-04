@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+
+%no indentation
+\usepackage{parskip}
+
+%afbeeldingen
+
+
+%Accents and special characters
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{gensymb}
+\usepackage[version=4]{mhchem}
+
+%equations, align left
+% \usepackage[fleqn]{amsmath}
+
+\usepackage[table,xcdraw]{xcolor}
+%Dutch spelling
+\usepackage[dutch]{babel}
+
+%To force figures and tables in text with [H]
+\usepackage{float}
+
+%More space between equations
+\setlength{\jot}{10pt}
+
+%Text strikethrough
+\usepackage{soul}
+
+%Smaller margins
+\usepackage[top=1in, bottom=1.25in, left=1.25in, right=1.25in]{geometry}
+
+%tabel with color
+\usepackage[table,xcdraw,dvipsnames]{xcolor}
+
+\usepackage{mhchem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{chemformula}
+\usepackage{siunitx}
+\DeclareSIUnit{\litre}{L}
+\usepackage{enumitem}
+\usepackage{derivative}
+\usepackage{fancyhdr}
+\usepackage{nccmath}
+\usepackage{multirow}
+\usepackage[dutch]{babel}
+\usepackage{chemfig}
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead{\textbf{IJkingstoets Chemische Reactorkunde} \hfill \textbf{3 november 2025}\\
+	% \textbf{Prof. J. Degrève} \hfill }
+	\textbf{Prof. F. Vermeire} \hfill \textbf{}}
+\bigskip
+
+\fancyfoot{} % clear all footer fields
+\fancyfoot[R]{\thepage}
+% % \fancyfoot[L]{\textbf{Schrijf op elk blad je naam.}\\
+	% \textbf{Schrijf duidelijk! Wat niet leesbaar is, wordt niet verbeterd!}}
+
+% 
+% \textbf{Start het antwoord van elk deel op een nieuw blad.}
+
+\textbf{Azijnzuur en vinyl acetaat monomeer (VAM) productie}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=15cm]{Ijkingstoets_flowsheet_3_11.svg}
+    \label{fig:temp_distribution}
+\end{figure}
+
+Het Monsanto-proces wordt gebruikt voor de omzetting van methanol (\chemfig{CH_3OH}) en koolstofmonoxide (\chemfig{CO}) naar azijnzuur (\chemfig{CH_3COOH}). De reactie (reactie 1) vindt plaats in vloeistoffase in een CSTR. Na de reactie kan het product azijnzuur (\chemfig{CH_3COOH}) gescheiden worden van de overblijvende reagentia in een distillatiekolom. De overblijvende reagentia kunnen verder in het proces als inerte stoffen (I) worden beschouwd. De bodemstroom van de kolom bevat het product azijnzuur. Azijnzuur kan vervolgens gebruikt worden om, samen met ethyleen (\chemfig{C_2H_4}) en zuurstofgas (\chemfig{O_2}), vinyl acetaat monomeer (\chemfig{C_2H_3OOCCH_3}) te produceren. De reactie (reactie 2) vindt plaats in gasfase in een PFR. Alle reactoren mogen isotherm verondersteld worden. Noteer steeds alle assumpties die gemaakt worden.
+\vspace{20pt} 
+\begin{equation*}
+\begin{split}
+    \text{Reactie 1:} \quad & \ce{CH3OH + CO <=> CH3COOH} \quad \\
+    &\text{met} \quad R_{\ce{CH3OH}} = -k_1 \quad [\text{mol/m}^3 \cdot \text{h}] \\
+    \text{Reactie 2:} \quad & \ce{C2H4 + CH3COOH + 0.5 O2 -> C2H3OOCCH3 + H2O} \quad \\
+    &\text{met} \quad R_{\ce{CH3COOH}} = -k_2 C_{\ce{CH3COOH}} \quad [\text{mol/m}^3 \cdot \text{h}]
+\end{split}
+\end{equation*}
+\vspace{16pt}
+
+
+
+\textbf{Vraag 1} \textbf{Bepaal het benodigde volume voor de CSTR}. Gebruik hiervoor de gegevens uit Tabel \ref{tabel 1}.
+\vspace{12pt}
+\newpage
+\vspace{16pt}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+Parameter              & Symbool   & Waarde \\ \hline
+Volumetrisch debiet stroom 3 & $q
+_3$ & $9 \ m^3/h$   \\ \hline
+Concentratie \ce{CH3OH} stroom 3 & $C_{\ce{CH3OH},3}$ & $1.5 \ mol/m^3$   \\ \hline
+Concentratie \ce{CO} stroom 3 & $C_{\ce{CO},3}$ & $1.0 \ mol/m^3$   \\ \hline
+Conversie \ce{CO} in CSTR     & $X_{\ce{CO}}$       & $0.9$  \\ \hline
+Kinetische constante reactie 1  & $k_1$ & $0.1 \ mol/(m^3 . h)$  \\ \hline
+\end{tabular}
+\caption{Gegevens met betrekking tot de CSTR.}
+\label{tabel 1}
+\end{table}
+\vspace{14pt}
+
+\textbf{Vraag 2} Veronderstel dat al het azijnzuur aanwezig in de inputstroom van de distillatiekolom (stroom 4) uiteindelijk terecht komt in de bodemstroom van de distillatiekolom (stroom 6). Verder is er geweten dat de bodemstroom  uit 80 mol\% azijnzuur en 20 mol\% methanol bestaat. \textbf{Bereken het molaire debiet van azijnzuur en het molaire debiet van methanol in de bodemstroom} van de distillatiekolom (stroom 6). \textbf{Bereken ook het molaire debiet van methanol en het molaire debiet van koolstofmonoxide in de topstroom} van de distillatiekolom (stroom 5). 
+\\ \\
+TIP: Beschouw de distillatiekolom als een 'black box' met input- en outputstromen en stel hierover een massabalans op.
+\\ \\
+\vspace{5pt}
+
+\textbf{Vraag 3} Zouden we het geproduceerde molaire debiet van azijnzuur kunnen verhogen door de topstroom van de distillatiekolom (stroom 5) te recyclen en bij te voegen aan de inputstroom van de CSTR, zonder het volume van de CSTR te wijzigen? \textbf{Beargumenteer.}
+
+\vspace{20pt}
+
+\textbf{Vraag 4} De bodemstroom van de distillatiekolom (stroom 6) wordt samengevoegd met een voedingsstroom bestaande uit \ce{C2H4} en \ce{O2} (stroom 7). De resulterende stroom (stroom 8) wordt gebruikt als inlaatstroom voor de PFR. \textbf{Bepaal het benodigde volume voor de PFR.} Gebruik hiervoor de bijkomende gegevens uit Tabel \ref{tabel 2}. Indien je vraag 2 niet hebt kunnen oplossen, mag je verder werken met $F_{\ce{CH3COOH},6}$ = $8.1\ mol/h$ en $F_{\ce{I},6}$ = $0.9 \ mol/h$.
+
+
+
+\vspace{15pt}
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\rowcolor[HTML]{EFEFEF} 
+Parameter              & Symbool   & Waarde \\ \hline
+Molair debiet \ce{O2} stroom 7 & $F_{\ce{O2},7}$ & $10 \ mol/h$   \\ \hline
+Molair debiet \ce{C2H4} stroom 7 & $F_{\ce{C2H4},7}$ & $10 \ mol/h$   \\ \hline
+Conversie \ce{CH3COOH} in PFR     & $X_{\ce{CH3COOH}}$       & $0.9$  \\ \hline
+Druk stroom 8  & $P_8$ & $1 \ atm$   \\ \hline
+Temperatuur stroom 8 & $T_8$ & $400 \ K$   \\ \hline
+Gasconstante & $R$ & $0.0821 \ (m^3 . atm)/(K.kmol)$   \\ \hline
+Kinetische constante reactie 2  & $k_2$ & $0.1 \ h^{-1}$  \\ \hline
+\end{tabular}
+\caption{Gegevens met betrekking tot de PFR.}
+\label{tabel 2}
+\end{table}
+
+
+
+\end{document}
